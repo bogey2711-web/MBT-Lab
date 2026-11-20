@@ -1,1 +1,1 @@
-{"build": 202611201305, "sha256": "8f6852238bf1c188da975cf941e0ed07beed9f1fd46151434d48b6c07f2df0b0", "notes": "Added a Credits tab listing every model and licence; credits removed from the model viewer."}
+{"build": 202611201324, "sha256": "a77a8a62f4cfd1a8606302f235b2ddd1914063a0dc8564c1dcfb418c04cbd911", "notes": "New: pick a colour theme (8) and style (6) in Settings, dark mode button, search, mobile menu, FAQ, Terms of use, DMCA policy, Privacy and Contact pages. Security hardening and phone layout fixes. K2, C1 Ariete, Leopard 2RI and K1A1 wireframes locked."}
