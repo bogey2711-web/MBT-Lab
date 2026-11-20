@@ -21,8 +21,8 @@ function bestCopy() {
 
 async function getText(urls) {
   for (const u of urls) {
-    try { const r = await net.fetch(u + (u.includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
-      if (!r.ok || !/^https:\/\/(raw\.githubusercontent\.com|bogey2711-web\.github\.io)\//.test(r.url)) continue;   // https and our own hosts only, even after redirects
+    try { const r = await net.fetch(u + (u.includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store', redirect: 'error' });   // never follow a redirect: only our own https hosts are ever read
+      if (!r.ok || !/^https:\/\/(raw\.githubusercontent\.com|bogey2711-web\.github\.io)\//.test(r.url || u)) continue;   // https and our own hosts only (r.url is empty in some Electron builds, so fall back to the requested URL)
       const len = +r.headers.get('content-length') || 0; if (len > MAX_BYTES) continue;
       const buf = Buffer.from(await r.arrayBuffer()); if (buf.length > MAX_BYTES) continue; return buf; } catch (e) { }
   }
