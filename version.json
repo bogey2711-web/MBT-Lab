@@ -1,1 +1,1 @@
-{"build": 202611201254, "sha256": "25594bb2963567becd3eca5f7627c162c3d3b445d2098f913e99b73ec99c5838", "notes": "First version with automatic updates."}
+{"build": 202611201305, "sha256": "8f6852238bf1c188da975cf941e0ed07beed9f1fd46151434d48b6c07f2df0b0", "notes": "Added a Credits tab listing every model and licence; credits removed from the model viewer."}
